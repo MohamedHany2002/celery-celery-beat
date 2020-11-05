@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 
-import django_heruko
+import django_heroku
 
 from pathlib import Path
 
@@ -27,7 +27,7 @@ SECRET_KEY = '(1v&)w%+lg49@qig!c8cqc*_@pgl8p+&%$hka#$*9d1ec*lo7k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+import os
 ALLOWED_HOSTS = []
 
 
@@ -168,4 +168,4 @@ from datetime import timedelta
 
 
 
-django_heruko.settings(locals())
+django_heroku.settings(locals())
