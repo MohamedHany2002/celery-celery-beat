@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 
-import django_heroku
 
 from pathlib import Path
 
@@ -118,8 +117,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-import django 
-django.setup()
+# import django 
+# django.setup()
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -164,8 +163,9 @@ from datetime import timedelta
 #         "schedule": crontab(minute="*/1"),
 #     },
 # }
+import redis
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 1
 
-
-
-
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
